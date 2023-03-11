@@ -14,6 +14,10 @@ function getGif() {
     })
     .then(function (response) {
       img.src = response.data.images.original.url;
+    })
+    .catch(function (response) {
+      img.src = './not found.gif';
+      console.log(`Oops ${response}`);
     });
 }
 
