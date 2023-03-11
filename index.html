@@ -5,27 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIPHY API test</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <img src="#" alt="" />
-    <button id="get-gif">Meow</button>
-    <script>
-      const img = document.querySelector('img');
-      function getGif() {
-        fetch(
-          'https://api.giphy.com/v1/gifs/translate?api_key=twHfM7TghUB7C8bUD3ROP21PlgeCU7Pj&s=cats',
-          { mode: 'cors' }
-        )
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (response) {
-            img.src = response.data.images.original.url;
-          });
-      }
-      const btn = document.querySelector('#get-gif');
-      btn.addEventListener('click', getGif);
-      getGif();
-    </script>
+    <div class="search">
+      <input type="text" name="search" id="search-input" />
+      <button id="search-btn">Search</button>
+    </div>
+    <img src="./giphy.gif" alt="" />
+    <button id="get-gif">More</button>
   </body>
 </html>

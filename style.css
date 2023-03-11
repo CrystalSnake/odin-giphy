@@ -1,0 +1,36 @@
+* {
+  background: rgb(17, 3, 26);
+  color: white;
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+img {
+  max-width: 600px;
+  height: auto;
+}
+
+input {
+  border-radius: 1em;
+  border-color: white;
+  padding: 0.2em 1em;
+}
+
+button {
+  border-radius: 1em;
+  border-color: white;
+  padding: 0.2em 1em;
+  background: rgb(150, 6, 163);
+}
+
+button:hover {
+  background: rgb(172, 8, 187);
+  box-shadow: 0 0.1em 0.7em rgb(126, 7, 116);
+}
