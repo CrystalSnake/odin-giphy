@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIPHY API test</title>
+  </head>
+  <body>
+    <img src="#" alt="" />
+    <button id="get-gif">Meow</button>
+    <script>
+      const img = document.querySelector('img');
+      function getGif() {
+        fetch(
+          'https://api.giphy.com/v1/gifs/translate?api_key=twHfM7TghUB7C8bUD3ROP21PlgeCU7Pj&s=cats',
+          { mode: 'cors' }
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (response) {
+            img.src = response.data.images.original.url;
+          });
+      }
+      const btn = document.querySelector('#get-gif');
+      btn.addEventListener('click', getGif);
+      getGif();
+    </script>
+  </body>
+</html>
